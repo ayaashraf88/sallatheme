@@ -734,7 +734,19 @@
             "title": "products-check",
             "icon": "sicon-store",
             "path": "home.products-check",
-            "fields": []
+            "fields": [
+                {
+                    "id": "title",
+                    "key": "46b261f1-fa01-4ee8-8d5b-530ec1ffd11b",
+                    "type": "static",
+                    "format": "title",
+                    "label": "Title",
+                    "value": "title",
+                    "variant": "h1",
+                    "icon": "sicon-format-text",
+                    "defaulted": true
+                }
+            ]
         }
     ],
     "support_url": null,
