@@ -737,7 +737,7 @@
             "fields": [
                 {
                     "id": "title",
-                    "key": "dc1e712f-dc68-49e8-ad69-dd1ae9406fae",
+                    "key": "ae10d6f1-b924-413a-840c-fdcb25865d07",
                     "type": "static",
                     "format": "title",
                     "label": "Title",
@@ -748,7 +748,7 @@
                 },
                 {
                     "id": "url",
-                    "key": "777b26e9-44e6-434e-9f06-c43d360bdc69",
+                    "key": "4d15cf8b-b398-487f-b5a1-03f8ac883e4d",
                     "type": "string",
                     "format": "url",
                     "inputType": "url",
@@ -765,7 +765,7 @@
                 },
                 {
                     "id": "slider",
-                    "key": "1636dd15-90ab-4174-9e1d-fab2e2c6de46",
+                    "key": "14b076fa-b57e-45ee-85e9-1502e442ee1d",
                     "type": "number",
                     "format": "slider",
                     "inputType": "range",
@@ -782,7 +782,7 @@
                 },
                 {
                     "id": "switch",
-                    "key": "85255462-3d70-457b-bf4d-6086cc48aa0c",
+                    "key": "2b0814e1-571b-4962-a682-346e1bf9c356",
                     "type": "boolean",
                     "format": "switch",
                     "label": "Switch",
@@ -791,6 +791,20 @@
                     "icon": "sicon-toggle-off",
                     "value": true,
                     "selected": false,
+                    "required": false,
+                    "defaulted": true
+                },
+                {
+                    "id": "code",
+                    "key": "06ca1d0d-78d1-453a-9faf-72af51c075fd",
+                    "type": "string",
+                    "format": "code",
+                    "label": "Code",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "body { color: green; }",
+                    "icon": "sicon-browser-code",
+                    "value": null,
                     "required": false,
                     "defaulted": true
                 }
