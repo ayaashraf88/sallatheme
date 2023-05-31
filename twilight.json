@@ -737,7 +737,7 @@
             "fields": [
                 {
                     "id": "description",
-                    "key": "c994d6c5-cb74-45c7-a1ee-17187bed34e2",
+                    "key": "005c72eb-0892-442f-8f84-ec6e8c05aea7",
                     "type": "static",
                     "format": "title",
                     "label": "Title",
@@ -747,7 +747,7 @@
                 },
                 {
                     "id": "url",
-                    "key": "4618e981-e9e1-4871-85e0-55a90c53744e",
+                    "key": "aee2ca90-18b2-4c93-896e-5b62ef6e4aae",
                     "type": "string",
                     "format": "url",
                     "inputType": "url",
@@ -764,7 +764,7 @@
                 },
                 {
                     "id": "slider",
-                    "key": "fe0247e1-d0ea-476d-a3d4-be6212186e56",
+                    "key": "6a2d267e-5b0e-469b-ad30-aadfcaa96754",
                     "type": "number",
                     "format": "slider",
                     "inputType": "range",
@@ -781,7 +781,7 @@
                 },
                 {
                     "id": "switch",
-                    "key": "8e2341d4-39bd-4efd-a0e6-9c8357192ff5",
+                    "key": "efad3179-be59-4da3-b6dd-8ac4dfa52951",
                     "type": "boolean",
                     "format": "switch",
                     "label": "Switch",
@@ -795,7 +795,7 @@
                 },
                 {
                     "id": "code",
-                    "key": "8ba98a40-49f4-442f-a88a-fe1e5991078c",
+                    "key": "b33bef73-fd19-41ed-8554-e5a57157518d",
                     "type": "string",
                     "format": "code",
                     "label": "Code",
@@ -804,6 +804,23 @@
                     "placeholder": "body { color: green; }",
                     "icon": "sicon-browser-code",
                     "value": null,
+                    "required": false,
+                    "defaulted": true
+                },
+                {
+                    "id": "dropdown_list",
+                    "key": "34ed47fa-a46f-4903-9e67-e297e0f16836",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "Dropdown List",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [],
+                    "options": [],
+                    "source": "Products",
+                    "multichoice": true,
+                    "searchable": true,
                     "required": false,
                     "defaulted": true
                 }
