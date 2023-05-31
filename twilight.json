@@ -737,13 +737,61 @@
             "fields": [
                 {
                     "id": "title",
-                    "key": "46b261f1-fa01-4ee8-8d5b-530ec1ffd11b",
+                    "key": "dc1e712f-dc68-49e8-ad69-dd1ae9406fae",
                     "type": "static",
                     "format": "title",
                     "label": "Title",
                     "value": "title",
                     "variant": "h1",
                     "icon": "sicon-format-text",
+                    "defaulted": true
+                },
+                {
+                    "id": "url",
+                    "key": "777b26e9-44e6-434e-9f06-c43d360bdc69",
+                    "type": "string",
+                    "format": "url",
+                    "inputType": "url",
+                    "label": "URL",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://salla.sa",
+                    "icon": "sicon-link",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30,
+                    "defaulted": true
+                },
+                {
+                    "id": "slider",
+                    "key": "1636dd15-90ab-4174-9e1d-fab2e2c6de46",
+                    "type": "number",
+                    "format": "slider",
+                    "inputType": "range",
+                    "label": "Slider",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-pin",
+                    "value": 0,
+                    "required": false,
+                    "step": 2.5,
+                    "minimum": -50,
+                    "maximum": 50,
+                    "defaulted": true
+                },
+                {
+                    "id": "switch",
+                    "key": "85255462-3d70-457b-bf4d-6086cc48aa0c",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "Switch",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": false,
+                    "required": false,
                     "defaulted": true
                 }
             ]
