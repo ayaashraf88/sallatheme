@@ -737,7 +737,7 @@
             "fields": [
                 {
                     "id": "description",
-                    "key": "005c72eb-0892-442f-8f84-ec6e8c05aea7",
+                    "key": "18280214-0005-4a88-9a37-36d30d588fe4",
                     "type": "static",
                     "format": "title",
                     "label": "Title",
@@ -746,70 +746,8 @@
                     "icon": "sicon-format-text"
                 },
                 {
-                    "id": "url",
-                    "key": "aee2ca90-18b2-4c93-896e-5b62ef6e4aae",
-                    "type": "string",
-                    "format": "url",
-                    "inputType": "url",
-                    "label": "URL",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://salla.sa",
-                    "icon": "sicon-link",
-                    "value": null,
-                    "required": false,
-                    "minLength": 6,
-                    "maxLength": 30,
-                    "defaulted": true
-                },
-                {
-                    "id": "slider",
-                    "key": "6a2d267e-5b0e-469b-ad30-aadfcaa96754",
-                    "type": "number",
-                    "format": "slider",
-                    "inputType": "range",
-                    "label": "Slider",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-pin",
-                    "value": 0,
-                    "required": false,
-                    "step": 2.5,
-                    "minimum": -50,
-                    "maximum": 50,
-                    "defaulted": true
-                },
-                {
-                    "id": "switch",
-                    "key": "efad3179-be59-4da3-b6dd-8ac4dfa52951",
-                    "type": "boolean",
-                    "format": "switch",
-                    "label": "Switch",
-                    "description": null,
-                    "labelHTML": null,
-                    "icon": "sicon-toggle-off",
-                    "value": true,
-                    "selected": false,
-                    "required": false,
-                    "defaulted": true
-                },
-                {
-                    "id": "code",
-                    "key": "b33bef73-fd19-41ed-8554-e5a57157518d",
-                    "type": "string",
-                    "format": "code",
-                    "label": "Code",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "body { color: green; }",
-                    "icon": "sicon-browser-code",
-                    "value": null,
-                    "required": false,
-                    "defaulted": true
-                },
-                {
-                    "id": "dropdown_list",
-                    "key": "34ed47fa-a46f-4903-9e67-e297e0f16836",
+                    "id": "products",
+                    "key": "08e66313-4ba5-4d41-8221-25f451e8555e",
                     "type": "items",
                     "format": "dropdown-list",
                     "label": "Dropdown List",
@@ -821,8 +759,7 @@
                     "source": "Products",
                     "multichoice": true,
                     "searchable": true,
-                    "required": false,
-                    "defaulted": true
+                    "required": false
                 }
             ]
         }
