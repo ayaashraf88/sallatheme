@@ -728,6 +728,13 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "b36edca7-3528-4976-879d-46955181e17f",
+            "title": "products-check",
+            "icon": "sicon-store",
+            "path": "home.products-check",
+            "fields": []
         }
     ],
     "support_url": null,
