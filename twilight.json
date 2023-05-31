@@ -736,19 +736,18 @@
             "path": "home.products-check",
             "fields": [
                 {
-                    "id": "title",
-                    "key": "ae10d6f1-b924-413a-840c-fdcb25865d07",
+                    "id": "description",
+                    "key": "c994d6c5-cb74-45c7-a1ee-17187bed34e2",
                     "type": "static",
                     "format": "title",
                     "label": "Title",
                     "value": "title",
                     "variant": "h1",
-                    "icon": "sicon-format-text",
-                    "defaulted": true
+                    "icon": "sicon-format-text"
                 },
                 {
                     "id": "url",
-                    "key": "4d15cf8b-b398-487f-b5a1-03f8ac883e4d",
+                    "key": "4618e981-e9e1-4871-85e0-55a90c53744e",
                     "type": "string",
                     "format": "url",
                     "inputType": "url",
@@ -765,7 +764,7 @@
                 },
                 {
                     "id": "slider",
-                    "key": "14b076fa-b57e-45ee-85e9-1502e442ee1d",
+                    "key": "fe0247e1-d0ea-476d-a3d4-be6212186e56",
                     "type": "number",
                     "format": "slider",
                     "inputType": "range",
@@ -782,7 +781,7 @@
                 },
                 {
                     "id": "switch",
-                    "key": "2b0814e1-571b-4962-a682-346e1bf9c356",
+                    "key": "8e2341d4-39bd-4efd-a0e6-9c8357192ff5",
                     "type": "boolean",
                     "format": "switch",
                     "label": "Switch",
@@ -796,7 +795,7 @@
                 },
                 {
                     "id": "code",
-                    "key": "06ca1d0d-78d1-453a-9faf-72af51c075fd",
+                    "key": "8ba98a40-49f4-442f-a88a-fe1e5991078c",
                     "type": "string",
                     "format": "code",
                     "label": "Code",
