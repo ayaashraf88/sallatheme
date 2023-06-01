@@ -92,34 +92,125 @@
 @import "lite-youtube-embed";
 @import "swiper/css/bundle";
 @import "mmenu-light/dist/mmenu-light.css";
-.s-product-card-entry {
+// .s-product-card-entry {
   // align-items: center;
-  width: 232px;
-  height: 387px;
-  position: relative;
-  border-radius: 5%;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border: 0.5px solid #bbbbbb5d;
-  border-radius: 14px;
-  opacity: 1;
-  .s-product-card-promotion-title{ 
+//   width: 232px;
+//   height: 387px;
+//   position: relative;
+//   border-radius: 5%;
+//   background: #ffffff 0% 0% no-repeat padding-box;
+//   border: 0.5px solid #bbbbbb5d;
+//   border-radius: 14px;
+//   opacity: 1;
+//   .s-product-card-promotion-title{ 
+//     writing-mode: vertical-rl;
+//     color: white;
+//     border-bottom-right-radius: 10px;
+//     border-bottom-left-radius: 10px;
+//     padding: 10px 7px;
+//     top: 0px;
+//     margin-right: 8px;
+//   }
+//   .s-product-card-wishlist-btn{
+//     top :2px ;
+//     color: $main-text-color;
+//     button{
+//         background-color: transparent !important;
+//     }
+ 
+// }
+// .s-product-card-image{
+//     background-color: white;
+// }
+// }
+.s-product-card {
+    &-entry {
+        width: 232px;
+        height: 387px;
+        position: relative;
+        border-radius: 5%;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 0.5px solid #bbbbbb5d;
+        border-radius: 14px;
+        opacity: 1;
+    }
+  
+    &-image {
+      &::before {
+        font-family: "sallaicons";
+        content: "\ec1f" !important;
+      }
+    }
+  
+    &-vertical {}
+  
+    &-horizontal {}
+  
+    &-fit-height {}
+  
+    &-special {}
+  
+    &-full-image {}
+  
+    &-minimal {}
+  
+   
+  
+    &-shadow {}
+  
+    &-out-of-stock {}
+  
+    &-wishlist-btn {
+
+        top :2px !important ;
+        color: $main-text-color !important;
+        background-color: transparent !important;     
+    }
+  
+    &-content {
+      &-main {}
+  
+      &-sub {}
+  
+      &-footer {}
+  
+      &-title {}
+  
+      &-subtitle {}
+  
+      &-pie {
+        &-svg {
+          circle {
+         
+          }
+  
+          &-base {}
+  
+          &-bar {
+           
+          }
+        }
+      }
+  
+      // for special card
+      &-extra-padding {}
+    }
+  
+    &-donation-input {}
+    
+  }
+  .s-product-card-promotion-title {
+
     writing-mode: vertical-rl;
     color: white;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
     padding: 10px 7px;
     top: 0px;
     margin-right: 8px;
-  }
-  .s-product-card-wishlist-btn{
-    top :2px ;
-    color: $main-text-color;
+}
+.s-product-card-wishlist-btn{
     button{
         background-color: transparent !important;
     }
- 
-}
-.s-product-card-image{
-    background-color: white;
-}
 }

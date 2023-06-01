@@ -8,6 +8,7 @@
 | component.products    | Product[] *Collection | @see views/pages/product.twig                                                |
 | position              | int                   | Sorting number start from zero                                               |
 #}
+
 <section class="s-block s-block--slider-with-bg s-block--full-bg">
     <div class="slider-bg" style="background-image: url('{{ component.background }}');">
         <div class="container pt-8 sm:pt-20 relative">
@@ -31,5 +32,10 @@
         slider-id="slider-with-bg-{{ position }}"
         ></salla-products-slider>
     </div>
+{# {% include 'home.components.fixed-products' %} #}
+      {# {% include 'pages.partials.product.slider' with {type: 'best-offers-' ~ position,autoplay:true} %} #}
+
 </section>
- 
+
+                {# {% include 'components.header._menu-item'  %} #}
+
