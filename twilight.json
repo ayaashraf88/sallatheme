@@ -735,7 +735,34 @@
             "title": "products-check",
             "icon": "sicon-store",
             "path": "home.products-check",
-            "fields": []
+            "fields": [
+                {
+                    "id": "description",
+                    "key": "18280214-0005-4a88-9a37-36d30d588fe4",
+                    "type": "static",
+                    "format": "title",
+                    "label": "Title",
+                    "value": "title",
+                    "variant": "h1",
+                    "icon": "sicon-format-text"
+                },
+                {
+                    "id": "products",
+                    "key": "08e66313-4ba5-4d41-8221-25f451e8555e",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "Dropdown List",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [],
+                    "options": [],
+                    "source": "Products",
+                    "multichoice": true,
+                    "searchable": true,
+                    "required": false
+                }
+            ]
         }
     ],
     "support_url": null,
