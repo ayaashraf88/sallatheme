@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="container -mt-62 relative overflow-hidden">
+    <div class="container -mt-62 relative " >
         <salla-products-slider 
         source="selected"
         source-value="[{{ component.products|map((product) => product.id)|join(',') }}]" 
@@ -32,8 +32,8 @@
         slider-id="slider-with-bg-{{ position }}"
         ></salla-products-slider>
     </div>
-{# {% include 'home.components.fixed-products' %} #}
-      {# {% include 'pages.partials.product.slider' with {type: 'best-offers-' ~ position,autoplay:true} %} #}
+{# {% include 'pages.myComponent' with {  products:component.products} %} #}
+      {# {% include 'pages.partials.product.card' with {product: 'best-offers-' ~ position,autoplay:true} %} #}
 
 </section>
 

@@ -93,7 +93,7 @@
 @import "swiper/css/bundle";
 @import "mmenu-light/dist/mmenu-light.css";
 // .s-product-card-entry {
-  // align-items: center;
+// align-items: center;
 //   width: 232px;
 //   height: 387px;
 //   position: relative;
@@ -102,7 +102,7 @@
 //   border: 0.5px solid #bbbbbb5d;
 //   border-radius: 14px;
 //   opacity: 1;
-//   .s-product-card-promotion-title{ 
+//   .s-product-card-promotion-title{
 //     writing-mode: vertical-rl;
 //     color: white;
 //     border-bottom-right-radius: 10px;
@@ -117,100 +117,309 @@
 //     button{
 //         background-color: transparent !important;
 //     }
- 
+
 // }
 // .s-product-card-image{
 //     background-color: white;
 // }
 // }
 .s-product-card {
-    &-entry {
-        width: 232px;
-        height: 387px;
-        position: relative;
-        border-radius: 5%;
-        background: #ffffff 0% 0% no-repeat padding-box;
-        border: 0.5px solid #bbbbbb5d;
-        border-radius: 14px;
-        opacity: 1;
-    }
-  
-    &-image {
-      &::before {
-        font-family: "sallaicons";
-        content: "\ec1f" !important;
-      }
-    }
-  
-    &-vertical {}
-  
-    &-horizontal {}
-  
-    &-fit-height {}
-  
-    &-special {}
-  
-    &-full-image {}
-  
-    &-minimal {}
-  
-   
-  
-    &-shadow {}
-  
-    &-out-of-stock {}
-  
-    &-wishlist-btn {
+  &-entry {
+    width: 232px;
+    height: 387px;
+    position: relative;
+    border-radius: 5%;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 0.5px solid #bbbbbb5d;
+    border-radius: 14px;
+    opacity: 1;
+  }
 
-        top :2px !important ;
-        color: $main-text-color !important;
-        background-color: transparent !important;     
+  &-image {
+    &::before {
+      font-family: "sallaicons";
+      content: "\ec1f" !important;
     }
-  
-    &-content {
-      &-main {}
-  
-      &-sub {}
-  
-      &-footer {}
-  
-      &-title {}
-  
-      &-subtitle {}
-  
-      &-pie {
-        &-svg {
-          circle {
-         
-          }
-  
-          &-base {}
-  
-          &-bar {
-           
-          }
+  }
+
+  &-vertical {
+  }
+
+  &-horizontal {
+  }
+
+  &-fit-height {
+  }
+
+  &-special {
+  }
+
+  &-full-image {
+  }
+
+  &-minimal {
+  }
+
+  &-shadow {
+  }
+
+  &-out-of-stock {
+  }
+
+  &-wishlist-btn {
+    top: 2px !important ;
+    color: $main-text-color !important;
+    background-color: transparent !important;
+  }
+
+  &-content {
+    &-main {
+    }
+
+    &-sub {
+    }
+
+    &-footer {
+    }
+
+    &-title {
+    }
+
+    &-subtitle {
+    }
+
+    &-pie {
+      &-svg {
+        circle {
+        }
+
+        &-base {
+        }
+
+        &-bar {
         }
       }
-  
-      // for special card
-      &-extra-padding {}
     }
-  
-    &-donation-input {}
-    
-  }
-  .s-product-card-promotion-title {
 
-    writing-mode: vertical-rl;
-    color: white;
-    border-bottom-right-radius: 10px !important;
-    border-bottom-left-radius: 10px !important;
-    padding: 10px 7px;
-    top: 0px;
-    margin-right: 8px;
-}
-.s-product-card-wishlist-btn{
-    button{
-        background-color: transparent !important;
+    // for special card
+    &-extra-padding {
     }
+  }
+
+  &-donation-input {
+  }
+}
+.s-product-card-promotion-title {
+  writing-mode: vertical-rl;
+  color: white;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  padding: 10px 7px;
+  top: 0px;
+  margin-right: 8px;
+}
+.s-product-card-wishlist-btn {
+  button {
+    background-color: transparent !important;
+  }
+}
+@font-face {
+  font-family: "HomeFont";
+  src: url("images/din-next-lt-w23-regular.ttf");
+}
+body {
+  text-align: right;
+  color: $main-text-color;
+  font-family: HomeFont !important;
+}
+
+.topBadge {
+  position: absolute;
+  top: 0;
+  .newBadge {
+    background-color: #f9593a;
+    color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 8px;
+    writing-mode: vertical-rl;
+    padding: 10px 7px;
+    // margin-right: -20px !important ;
+  }
+}
+.gallaryImage {
+  margin: 10px !important;
+  box-shadow: 0px 3px 6px #0000003c !important;
+  border-radius: 13px !important;
+  justify-content: center !important;
+  display: flex !important;
+  height: 100px !important;
+  width: 77px !important;
+  border: none;
+  img {
+    width: 80%;
+  }
+}
+
+.perfumaddToCart {
+  .s-button-primary {
+    background-color: #f282a9 !important;
+    color: white;
+    border-radius: 25px;
+    border: 1px #f282a9 solid !important;
+    padding: 13px 15px;
+  }
+}
+.perfumPrice {
+  color: #f282a9;
+  font-size: 22px;
+  font-weight: bold;
+}
+.perfumDiscount {
+  color: #f282a9;
+  font-size: 22px;
+  text-decoration: line-through;
+  opacity: 45%;
+}
+.nav-tabs a {
+  font-size: 19px;
+  color: #f282a9;
+  padding: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #dee2e6;
+  &:hover {
+    text-decoration: none;
+    color: #919191;
+  }
+}
+.nav-tabs li .active {
+  color: #919191;
+  border-bottom: 1px #f282a9 solid;
+  padding: 4px;
+  font-weight: bold;
+  &:hover {
+    color: #f282a9 !important;
+  }
+}
+.infoData {
+  font-size: 16px;
+  color: #707070;
+}
+.perfumaddToFav {
+  color: #f282a9 !important;
+  border-radius: 25px !important;
+  border: 1px #f282a9 solid !important;
+  padding: 10px;
+}
+.addToFav:hover {
+  color: #f282a9;
+}
+.card {
+  .s-button-primary {
+    background-color: #f282a9;
+    color: white;
+    padding: 10px;
+    border-radius: 0 10px 0 10px;
+    text-align: center;
+    width: 66px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin-top: 2px;
+  }
+  .middle {
+    color: #595959;
+    text-decoration: line-through;
+    font-size: 14px;
+    font-weight: 100;
+  }
+  .first {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+.card-body {
+    text-align: right;
+    padding: 0px !important;
+
+    .product-title {
+      .title {
+        font-size: 20px;
+        color: $main-text-color;
+        margin-top: 50px;
+        padding-right: 10px;
+      }
+
+      a {
+      }
+    }
+    .rating_and_discount {
+      border-bottom: 1px #afafaf solid;
+      padding-right: 10px;
+      padding-bottom: 2px;
+      .discount {
+        background-color: #f282a9;
+        color: white;
+        padding: 3px;
+        font-size: 11px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 40px;
+      }
+    }
+  }
+  
+@media only screen and (min-width: 375px) {
+  .perfumContainer {
+    flex-flow: column;
+  }
+  .image {
+    order: 1;
+  }
+  .info {
+    order: 2;
+  }
+
+ 
+}
+@media only screen and (min-width: 550px) {
+  .perfumContainer {
+    flex-flow: row;
+  }
+  .image {
+    order: 2;
+  }
+  .info {
+    order: 1;
+  }
+  .card {
+    width: 232px;
+    text-align: right;
+    height: 387px;
+    position: relative;
+    border-radius: 5% !important;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 0.5px solid #bbbbbb5d;
+    border-radius: 14px;
+    opacity: 1;
+    .prodImage {
+      // display: flex;
+      width: 180px;
+      height: 222px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .info {
+    position: relative !important;
+    .bottomDiv {
+      position: relative;
+      top: 470px !important;
+    }
+  }
 }

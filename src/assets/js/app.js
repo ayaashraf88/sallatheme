@@ -255,5 +255,176 @@ class App extends AppHelpers {
     });
   }
 }
+class ProductCard extends HTMLElement {
+  connectedCallback() {
+
+    // Handle landing page
+    this.source = salla.config.get('page.slug');
+    if (this.source == 'landing-page') {
+      this.hideAddBtn = true;
+      this.showQuantity = true;
+    }
+
+    // Append host classes and id
+    this.classList.add('card');
+    this.setAttribute('data-aos' , 'fade-down-left');
+    this.setAttribute('data-aos-duration' , '1500');
+    this.setAttribute('data-aos-anchor-placement' , 'center-center');
+    this.id = `product_${this.product.id}`
+    if (this.product.is_out_of_stock) {
+      this.classList.add('is-out');
+    }
+
+    // Add fit type class
+    let fitType = salla.config.get('store.settings.product.fit_type')
+    if (!!fitType) {
+      this.classList.add(`${fitType}`)
+    }
+
+    salla.lang.onLoaded(() => {
+      AOS.init();
+      this.render()
+    })
+
+    // Props
+    this.horizontal = this.getAttribute('horizontal') === 'true';
+    this.showWishlist = this.getAttribute('show-wishlist') === 'true';
+
+    this.render()
+  }
+
+  render() {
+
+    // Translations
+    const remained = salla.lang.get('pages.products.remained');
+    const donationPH = salla.lang.get('pages.products.donation_placeholder');
+    const startingPrice = salla.lang.get('pages.products.starting_price');
+    const outOfStock = salla.lang.get('pages.products.out_of_stock');
+    const calories = salla.lang.get('pages.products.calories');
+
+
+    this.innerHTML = `
+       
+          <div class="product-block__thumb">
+      
+            <a href="${this.product.url}" class="thumb-wrapper" aria-label="${this.product.name}">
+            <div class="prodImage mx-auto"><img class="lazy-load"  src="${'images/img_loader.png'}" data-src="${this.product.image.url
+      }" alt="${this.product.image.alt}" /></div>
+            </a>
+          </div>
+          ${this.showWishlist
+        ? `<span class="btn--product-like">
+                  <salla-button loader-position="center" shape="icon" size="small" color="danger" class="btn--delete" onclick="salla.wishlist.remove(${this.product.id})">
+                      <i class="sicon-cancel"></i>
+                  </salla-button>
+                </span>`
+        : ''
+      }
+          <div class=" wide donating-wrap">
+            <div class="card-body">
+              <a href="${this.product.url}" class="product-title">
+                <h2 class="title title--primary title--small">${this.product.name}</h2>
+                <p>${!!this.product.subtitle ? this.product.subtitle : ''}</p>
+              </a>
+              <div class="rating_and_discount ">
+								<div class="discount ">-
+                ${Math.ceil((this.product.sale_price/this.product.regular_price)*100)}
+									%</div>
+
+							</div>
+              ${this.product.calories
+        ? `<div class="font-sm mt-5 mb-10">
+                      <i class="d-inline-block sicon-fire color-danger mr-1 ml-0"></i>
+                      <strong>${this.product.calories}</strong> ${calories}
+                    </div>`
+        : ''
+      }
+            ${this.product.is_donation ?
+        `{% component 'product.donation-progress-bar' with {'product': product, 'is_cart': is_cart} %}
+                <div class="form mt-10 mb-10">
+                  <div class="form-group">
+                    {{ csrf_field() }}
+                    <div class="input-group input-group--end">
+                      <input placeholder="${donationPH}"
+                             type="text"
+                             id="donation_amount_${this.product.id}"
+                             name="donation_amount"
+                             class="form-control form-control--short _parseArabicNumbers"
+                             value="${salla.url.is_page('cart') ? this.product.price : ''}"
+                             data-digits-with-decimal
+                             data-digits
+                             ${!this.product.can_donate ? 'disabled' : ''} />
+                      <span class="input-group-addon"> ${salla.config.currency().symbol} </span>
+                    </div>
+                  </div>
+                </div>`
+        : ''
+      }
+      <div class="flex justify-between	 items-center">
+            <div class="price-wrapper">
+              ${this.product.is_on_sale ?
+                `
+                <p class="lg:mr-4 md:mr-0 first">
+								${salla.money(this.product.sale_price)}
+								<span class="middle mr-2">
+                ${salla.money(this.product.price)}
+									</span>
+							</p>
+                ` :
+        this.product.starting_price ?
+          `${startingPrice}<span>${salla.money(this.product.starting_price)}</span>` :
+          `<span>${salla.money(this.product.price)}</span>`
+      }</div>
+
+                ${!this.hideAddBtn ?
+        `<div class="  ${this.product.status == 'out' ? 'disabled' : ''}">
+                    <salla-add-product-button
+                        
+                        product-id="${this.product.id}"
+                        product-status="${this.product.status}"
+                        product-type="${this.product.type}">
+                        ${this.product.type == 'booking' ? '<i class="sicon-calendar-date"></i>' : '<i class="fas fa-shopping-cart"></i>'}
+                    </salla-add-product-button>
+                  </div>
+                  </div>
+                  `
+        : ''
+      }
+      <div class="container topBadge" style="">
+
+      ${this.product.promotion_title=="جديد"
+        ?
+        `
+        <div class="flex flex-row justify-between" id="newInfo">
+									<div class="newBadge ml-5 ">${this.product.promotion_title}</div>
+									<div
+										class="favourite mr-5">
+										<salla-button shape="icon" color="black" fill="none" aria-label="Add or remove to wishlist" class="btn--wishlist animated " onclick="salla.wishlist.toggle(${this.product.id})" data-id="${this.product.id}">
+											<i class="fa-regular fa-heart"></i>
+										</salla-button>
+									</div>
+								</div>`
+        :!this.product.promotion_title ? 
+        `<div class=" lg:flex flex-row justify-end " id="newInfo">
+        <div class="favourite ">
+          <salla-button shape="icon" color="black" fill="none" aria-label="Add or remove to wishlist" class="btn--wishlist animated " onclick="salla.wishlist.toggle(${this.product.id})" data-id="${this.product.id}">
+            <i class="fa-regular fa-heart"></i>
+          </salla-button>
+        </div>
+      </div>`
+        : this.showQuantity && this.product.quantity
+          ? `<span class="badge badge--ribbon badge--primary">${remained} ${this.product.quantity}</span>`
+          : this.showQuantity && this.product.is_out_of_stock
+            ? `<div class="out-badge ${this.horizontal ? '' : 'max-w-[calc(100%-60px)]'}">${outOfStock}</div>`
+            : ''
+      }
+      </div>
+      `
+    document.lazyLoadInstance?.update(document.querySelectorAll('.product-block__thumb .lazy-load'));
+  }
+
+}
+customElements.define('custom-salla-product-card', ProductCard);
 
 salla.onReady(() => (new App).loadTheApp());
+
