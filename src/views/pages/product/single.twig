@@ -107,7 +107,7 @@
 		</div>
 		<div class="row " id="product-{{ product.id }}">
 			<div
-				class="info col-7  mb-3 pr-0 ">
+				class="info col-lg-7 col-sm-12 mb-3 pr-0 ">
 				{# <div class="row"></div> #}
 
 				<ul class="nav nav-tabs">
@@ -163,7 +163,7 @@
 				</div>
 
 			</div>
-			<div class="col-4 md:col-2 sm:col-2 image  sidebar md:sticky w-full md:!w-2/4 rtl:ml-8 ltr:mr-8 pb-8 md:pb-16 overflow-hidden shrink-0">
+			<div class="col-lg-4 col-sm-12 image  sidebar md:sticky w-full md:!w-2/4 rtl:ml-8 ltr:mr-8 pb-8 md:pb-16 overflow-hidden shrink-0">
 				{% set has_many_images = product.images|length > 1 %}
 				<salla-slider
 					id="details-slider-{{ product.id }}" class="details-slider rounded-md " type="thumbs" loop="false" listen-to-thumbnails-option show-thumbs-controls="false">
